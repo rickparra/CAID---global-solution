@@ -1,0 +1,12 @@
+.rodape {
+    background-color: #fff9e7;
+    color: #1d1d1d;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    position: relative;
+    width: 100%;
+    margin-top: auto; /* Este estilo empurra o rodapé para o final do conteúdo */
+}

@@ -1,0 +1,106 @@
+:root {
+  --color-primary: #FF6A00;
+  --color-secondary: #000000;
+  --color-text: #000000;
+  --color-button: #FFC107;
+  --color-button-hover: #ffe9a6;
+  --color-bg: #F5F5F5;
+  --bg-menu: #FFFFFF;
+}
+
+
+  header {
+    position: sticky !important;
+    top: 0;
+    z-index: 1000000;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 80px 2rem;
+    background-color: #fff9e7;
+    transition: height 0.5s ease;
+    transition: background-color 0.5s ease; /* Add background-color transition */
+  }
+  
+  .logo {
+    font-size: 14px;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+
+  .hamburguer {
+    display: none;
+  }
+
+  .line{
+    background-color: #F5F5F5;
+  }
+  
+  .nav-bar ul {
+    display: flex;
+  }
+  
+  .nav-bar ul li a {
+    display: block;
+    font-size: 17px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+    text-decoration: none;
+  }
+  
+  .nav-bar ul li a:hover {
+    color: var(--color-text);
+    background: var(--color-button-hover);
+    }
+
+  @media only screen and (max-width: 1005px){
+    .hamburguer{
+      display: block;
+      cursor: pointer;
+    }
+    .hamburguer .line{
+      width: 30px;
+      height: 3px;
+      margin: 6px 0;
+    }
+    .nav-bar{
+      height: 0px;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      transition: 0.2s;
+      overflow: hidden;
+      top: 100%; /* Define a distância em relação ao topo */
+    }
+    .nav-bar.active{
+      background: #070707;
+      height: 270px;
+      transform: translateY(0%); /* Exibe o menu no topo da tela */
+      box-shadow: 0px 5px 5px -5px rgba(70, 70, 70, 0.75);
+    }
+  
+    .nav-bar ul{
+      display: block;
+      width: fit-content;
+      margin: 45px auto 0 auto;
+      text-align: center;
+      transition: 0.5s;
+      opacity: 0;
+    }
+  
+    .nav-bar.active ul{
+      opacity: 1;
+    }
+  
+    .nav-bar ul li a{
+      margin-bottom: 12px;
+    }
+  }
