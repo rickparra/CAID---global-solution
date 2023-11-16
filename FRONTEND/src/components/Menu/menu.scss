@@ -8,6 +8,56 @@
   --bg-menu: #FFFFFF;
 }
 
+.pre-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Substitua pelo tamanho desejado */
+  height: 40px; /* Substitua pelo tamanho desejado */
+  background-color: #000000;
+  border-radius: 50%; /* Define o border-radius para metade da largura/altura */
+  cursor: pointer;
+
+  p{
+    font-size: 20;
+    color: #F5F5F5;
+  }
+}
+
+.logout-box {
+  position: absolute;
+  top: 70px; /* Ajuste conforme necessário */
+  right: 80px; /* Ajuste conforme necessário */
+  background-color: #fff4d5;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start; /* Alterado para alinhar os itens à esquerda */
+  justify-content: left; /* Mantido para garantir o alinhamento vertical */
+  flex-direction: column;
+  cursor: default;
+}
+
+.logout-box p {
+  margin: 0.2rem;
+  color: #000000;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+
+
 
   header {
     position: sticky !important;

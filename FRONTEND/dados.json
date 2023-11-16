@@ -1,6 +1,8 @@
 {
   "usuarios": [
     { "id": 1, "username": "usuario1", "senha": "senha123" },
-    { "id": 2, "username": "usuario2", "senha": "senha456" }
+    { "id": 2, "username": "usuario2", "senha": "senha456" },
+    { "id": 3, "username": "Ale", "senha": "senha" }
+
   ]
 }
