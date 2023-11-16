@@ -7,6 +7,7 @@ import App from './App'
 import Predict from './routes/Predict'
 import Error from './routes/Error'
 import Login from './routes/Login'
+import About from './routes/About'
 
 const router = createBrowserRouter([
   {
@@ -16,11 +17,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        element: <Login />
+      },
+      {
+        path: "/predict",
         element: <Predict />
       },
       {
-        path: "/login",
-        element: <Login />
+        path: "/about",
+        element: <About />
       },
     ]
   }

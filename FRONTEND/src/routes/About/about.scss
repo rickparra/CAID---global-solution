@@ -1,0 +1,140 @@
+/* SobreNos.module.css */
+//Página explicando temas gerais do projeto e sobre a equipe
+.top_site {
+    min-height: 100vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 800px;
+  }
+  
+  .leftTitle {
+    text-align: left;
+    margin-left: -9rem;
+  }
+  
+  .rightTitle {
+    text-align: right;
+    margin-right: -8rem;
+  }
+  
+  @media (max-width: 900px) {
+    .title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .leftTitle,
+    .rightTitle {
+      text-align: center;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  
+  .title h1 {
+    margin: 0;
+  }
+  
+  .sub_title {
+    margin-top: 3rem;
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 33.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sub_title h3 {
+    font-weight: 600;
+    line-height: 1.2;
+    /* Ajuste esse valor para controlar o espaçamento entre as linhas */
+  }
+  
+  .nossasIdeias {
+    display: flex;
+  }
+  
+  .esquerda {
+    width: 30%;
+    margin: 6rem;
+  }
+  
+  .esquerda h2 {
+    font-size: 31px;
+    line-height: 1.2;
+    /* Ajuste esse valor para controlar o espaçamento entre as linhas */
+  }
+  
+  .direita {
+    width: 70%;
+    margin: 6rem;
+  }
+  
+  .direita h1 {
+    line-height: 1.4;
+    /* Ajuste esse valor para controlar o espaçamento entre as linhas */
+    font-size: 40px;
+    margin-bottom: 5rem;
+  }
+  
+  .blockContainer {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  @media (max-width: 900px) {
+    .blockContainer {
+      gap: 2rem;
+    }
+  
+    .esquerda {
+      width: 20%;
+      margin: 2rem;
+    }
+  
+    .direita {
+      width: 80%;
+      margin: 2rem;
+    }
+  
+    .title h1 {
+      line-height: 1.4;
+      /* Ajuste esse valor para controlar o espaçamento entre as linhas */
+    }
+  }
+  
+  @media (max-width: 735px) {
+    .blockContainer {
+      flex-direction: column;
+    }
+  
+    .direita h1 {
+      font-size: 34px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .nossasIdeias {
+      flex-direction: column;
+    }
+  
+    .top_site {
+      padding-top: -1rem;
+    }
+  }

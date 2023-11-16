@@ -1,0 +1,23 @@
+.block {
+    width: 33%;
+    flex-grow: 1;
+  }
+  
+  .block h3 {
+    line-height: 1.4; /* Ajuste esse valor para controlar o espaçamento entre as linhas */
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .block p {
+    font-size: 21px;
+    line-height: 1.5;
+    color: #000000; 
+  }
+  
+  @media (max-width: 800px) {
+    .block {
+      width: 100%;
+    }
+  }

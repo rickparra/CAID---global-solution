@@ -37,7 +37,7 @@
   }
 
   .line{
-    background-color: #F5F5F5;
+    background-color: #000000;
   }
   
   .nav-bar ul {
@@ -81,7 +81,7 @@
       top: 100%; /* Define a distância em relação ao topo */
     }
     .nav-bar.active{
-      background: #070707;
+      background: #cfcfcf;
       height: 270px;
       transform: translateY(0%); /* Exibe o menu no topo da tela */
       box-shadow: 0px 5px 5px -5px rgba(70, 70, 70, 0.75);

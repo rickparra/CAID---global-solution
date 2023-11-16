@@ -1,11 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import './predict.scss';
 
-function App() {
+export default function App() {
   const [image, setImage] = useState(null);
+  const [imageUrl, setImageUrl] = useState(null);
   const [result, setResult] = useState(null);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleImageChange = (e) => {
+    const uploadedImage = e.target.files[0];
+
+    // Atualiza a URL da imagem para visualização instantânea
+    setImageUrl(URL.createObjectURL(uploadedImage));
+
+    // Atualiza o estado da imagem
+    setImage(uploadedImage);
+
+    // Realiza a previsão automaticamente
+    handlePrediction(uploadedImage);
+  };
+
+  const handlePrediction = async (image) => {
+    if (!image) {
+      // Adicione lógica para lidar com nenhum arquivo selecionado, se necessário
+      return;
+    }
 
     const formData = new FormData();
     formData.append('image', image);
@@ -23,22 +41,43 @@ function App() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input type="file" onChange={(e) => setImage(e.target.files[0])} />
-        <button type="submit">Prever</button>
+    <div className="container">
+      <form>
+        <label htmlFor="imageInput" className="upload-container">
+          Arraste e solte ou clique aqui para escolher uma imagem
+          <input
+            id="imageInput"
+            type="file"
+            onChange={(e) => handleImageChange(e)}
+            className="upload-input"
+          />
+        </label>
+
+        {imageUrl && (
+          <div className="image-container">
+            <img
+              src={imageUrl}
+              alt="Uploaded"
+              className="uploaded-image"
+            />
+          </div>
+        )}
+
+        {result && (
+          <div className="result">
+            Resultado: A classe predita é{' '}
+            {result.predicted_class === 0
+              ? 'glioma'
+              : result.predicted_class === 1
+              ? 'meningioma'
+              : result.predicted_class === 2
+              ? 'sem tumor'
+              : result.predicted_class === 3
+              ? 'pituitary'
+              : ''}
+          </div>
+        )}
       </form>
-  
-      {result && (
-  <div>
-    Resultado: A classe predita é {result.predicted_class === 0 ? 'glioma' :
-                                     result.predicted_class === 1 ? 'menigioma' :
-                                     result.predicted_class === 2 ? 'sem tumor' :
-                                     result.predicted_class === 3 ? 'pituitary' : ''}
-  </div>
-)}
     </div>
   );
 }
-
-export default App;

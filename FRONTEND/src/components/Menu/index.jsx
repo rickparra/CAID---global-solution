@@ -30,12 +30,17 @@ export default function Menu() {
         <ul>
           <li>
             <MenuLink to="/" onClick={closeMenu}>
-              Home
+              Login
             </MenuLink>
           </li>
           <li>
-            <MenuLink to="/login" onClick={closeMenu}>
-              Login
+            <MenuLink to="/about" onClick={closeMenu}>
+              Sobre
+            </MenuLink>
+          </li>
+          <li>
+            <MenuLink to="/predict" onClick={closeMenu}>
+              CAID
             </MenuLink>
           </li>
         </ul>
