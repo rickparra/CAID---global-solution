@@ -1,4 +1,6 @@
+// ...imports
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import './login.scss';
 
 export default function Login() {
@@ -7,6 +9,8 @@ export default function Login() {
     username: "",
     senha: ""
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,14 +28,8 @@ export default function Login() {
 
         if (user) {
           setMsgStatus("Login realizado com sucesso!");
-
-          // Armazena o nome do usuário na sessionStorage
           sessionStorage.setItem("token-user", user.username);
-
-          setTimeout(() => {
-            // Utilizando o hook useHistory do React Router para redirecionar
-            window.location = "/predict";
-          }, 5000);
+          navigate("/predict");
         } else {
           setMsgStatus("Senha ou usuário inválidos!!");
           setTimeout(() => {
@@ -42,9 +40,12 @@ export default function Login() {
             });
           }, 5000);
         }
+      } else {
+        setMsgStatus("Erro ao obter usuários. Tente novamente mais tarde.");
       }
     } catch (error) {
       console.error(error);
+      setMsgStatus("Ocorreu um erro. Tente novamente mais tarde.");
     }
   };
 
@@ -56,27 +57,32 @@ export default function Login() {
           <div className="form-group">
             <label htmlFor="login">Login:</label>
             <input
+              placeholder="Ex: usuario1"
               type="text"
               id="login"
               value={usuario.username}
               onChange={handleChange}
               name="username"
+              aria-label="Username"
             />
           </div>
           <div className="form-group">
             <label htmlFor="password">Senha:</label>
             <input
+              placeholder="Ex: senha123"
               type="password"
               id="password"
               value={usuario.senha}
               onChange={handleChange}
               name="senha"
+              aria-label="Password"
             />
           </div>
           <div className="form-group">
-            <button type="submit">Entrar</button>
+            <button type="submit" className="login-button">Entrar</button>
           </div>
         </form>
+        {msgStatus && <p className="status-message">{msgStatus}</p>}
       </div>
     </div>
   );

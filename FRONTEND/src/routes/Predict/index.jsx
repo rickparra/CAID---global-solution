@@ -51,46 +51,51 @@ export default function App() {
 
   if (sessionStorage.getItem("token-user")) {
     return (
-      <div className="container">
-        <div className="presentation">
-          Olá {username}, como posso te ajudar?
-        </div>
-        <form>
-          <label htmlFor="imageInput" className="upload-container">
-            Arraste e solte ou clique aqui para escolher uma imagem
-            <input
-              id="imageInput"
-              type="file"
-              onChange={(e) => handleImageChange(e)}
-              className="upload-input"
-            />
-          </label>
-
-          {imageUrl && (
-            <div className="image-container">
-              <img
-                src={imageUrl}
-                alt="Uploaded"
-                className="uploaded-image"
+      <div>
+        <div className="container">
+          <div className="presentation">
+            Olá {username}, como posso te ajudar?
+          </div>
+          <form>
+            <label htmlFor="imageInput" className="upload-container">
+              Arraste e solte ou clique aqui para escolher uma imagem
+              <input
+                id="imageInput"
+                type="file"
+                onChange={(e) => handleImageChange(e)}
+                className="upload-input"
               />
-            </div>
-          )}
+            </label>
 
-          {result && (
-            <div className="result">
-              Resultado: A classe predita é{' '}
-              {result.predicted_class === 0
-                ? 'glioma'
-                : result.predicted_class === 1
-                ? 'meningioma'
-                : result.predicted_class === 2
-                ? 'sem tumor'
-                : result.predicted_class === 3
-                ? 'pituitary'
-                : ''}
-            </div>
-          )}
-        </form>
+            {imageUrl && (
+              <div className="image-container">
+                <img
+                  src={imageUrl}
+                  alt="Uploaded"
+                  className="uploaded-image"
+                />
+              </div>
+            )}
+
+            {result && (
+              <div className="result">
+                Resultado: A classe predita é{' '}
+                {result.predicted_class === 0
+                  ? 'glioma'
+                  : result.predicted_class === 1
+                    ? 'meningioma'
+                    : result.predicted_class === 2
+                      ? 'sem tumor'
+                      : result.predicted_class === 3
+                        ? 'pituitary'
+                        : ''}
+              </div>
+            )}
+          </form>
+        </div>
+        <div className="container_2">
+
+        </div>
       </div>
     );
   } else {

@@ -56,13 +56,13 @@ export default function Menu() {
             </li>
             <li>
               <MenuLink to="/predict" onClick={closeMenu}>
-                CAID
+                TIAO
               </MenuLink>
             </li>
           </ul>
         </nav>
         <div className="profile" onClick={handleProfileClick}>
-          <p>AI</p>
+          <p>A\</p>
           {logoutVisible && (
             <div className="logout-box">
               <p>Configurações</p>
