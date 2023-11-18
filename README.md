@@ -1,2 +1,84 @@
-# GLOBAL
- 
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <h1>CAID - Câncer AI Diagnóstico e Assistente Digital</h1>
+
+  <p>O CAID é uma solução de Inteligência Artificial para auxiliar no diagnóstico precoce de câncer a partir da análise de imagens médicas combinada a dados clínicos do paciente.</p>
+
+  <h2>Propósito do Projeto</h2>
+
+  <p>O diagnóstico precoce do câncer pode aumentar significativamente as chances de sobrevivência e qualidade de vida dos pacientes. O CAID tem como objetivo utilizar técnicas de IA para aprimorar e acelerar a detecção do câncer em estágios iniciais e avançados.</p>
+
+  <h2>Funcionalidades</h2>
+
+  <ul>
+    <li>Upload de imagens de exames como mamografia, tomografia, etc.</li>
+    <li>Extração de dados relevantes do prontuário eletrônico do paciente</li>
+    <li>Modelo de deep learning para análise das imagens e detecção de anomalias</li>
+    <li>Chatbot para diálogo com o médico, levantando informações importantes do caso</li>
+    <li>Interface amigável para apresentar resultados e explicações</li>
+  </ul>
+
+  <h2>Tecnologias Utilizadas</h2>
+
+  <ul>
+    <li>Python</li>
+    <li>Framework KERAS para models de deep learning</li>
+    <li>React para interface web</li>
+    <li>Flask para a API</li>
+  </ul>
+
+  <h2>Começando</h2>
+
+  <h3>Passos para Configurar e Executar o CAID</h3>
+
+  <h4>Dependências Python</h4>
+
+  <p>Certifique-se de ter as seguintes dependências Python instaladas antes de executar o CAID:</p>
+
+  <h5>Dependências Backend</h5>
+
+  <pre><code>pip install flask opencv-python keras</code></pre>
+
+  <ol>
+    <li><strong>Treinar o Modelo de Deep Learning:</strong>
+      <ul>
+        <li>Acesse a pasta <code>deeplearning</code>.</li>
+        <li>Abra o arquivo <code>keras.ipynb</code> para treinar o modelo.</li>
+      </ul>
+    </li>
+    <li><strong>Configurar o Backend:</strong>
+      <ul>
+        <li>Vá para a pasta <code>backend</code>.</li>
+        <li>Execute o arquivo <code>app.py</code>.</li>
+      </ul>
+    </li>
+    <li><strong>Configurar o Frontend:</strong>
+      <ul>
+        <li>Vá para a pasta <code>frontend</code>.</li>
+        <li>Execute os seguintes comandos:</li>
+      </ul>
+      <pre><code>npm install
+npm run backend  # Conectar com o jsonserver
+npm run dev</code></pre>
+    </li>
+  </ol>
+
+  <h2>Contribuindo</h2>
+
+  <p>Informações sobre como contribuir com o projeto - issues, pull requests, etc.</p>
+
+  <h2>License</h2>
+
+  <p>Código aberto sob a licença MIT.</p>
+
+</body>
+
+</html>
