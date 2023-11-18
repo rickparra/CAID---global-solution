@@ -6,7 +6,7 @@ from keras.models import load_model
 app = Flask(__name__)
 
 # Carrega modelo
-model = load_model('E:\FIAP\GLOBAL\BACKEND\modelo.h5')
+model = load_model('E:\FIAP\GLOBAL\DEEPLEARNING\modelo\modelo.h5')
 
 # Habilita CORS
 from flask_cors import CORS
