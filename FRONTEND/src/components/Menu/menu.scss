@@ -36,14 +36,14 @@
 .logout-box {
   position: absolute;
   top: 70px; 
-  right: 80px; /* Ajuste conforme necessário */
+  right: 80px; 
   background-color: #fff4d5;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   display: flex;
-  align-items: flex-start; /* Alterado para alinhar os itens à esquerda */
-  justify-content: left; /* Mantido para garantir o alinhamento vertical */
+  align-items: flex-start; 
+  justify-content: left; 
   flex-direction: column;
   cursor: default;
 }
