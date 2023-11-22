@@ -6,11 +6,11 @@ from keras.models import load_model
 app = Flask(__name__)
 
 # Carrega modelo
-model = load_model('E:\FIAP\GLOBAL\DEEPLEARNING\modelo\modelo.h5')
+model = load_model('BACKEND/modelo.h5')
 
 # Habilita CORS
 from flask_cors import CORS
-CORS(app, origins='*')
+CORS(app, origins='http://localhost:5173')
 
 # Rota para predição
 @app.route('/predict', methods=['POST', 'OPTIONS'])
