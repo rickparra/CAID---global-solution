@@ -21,10 +21,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px; /* Substitua pelo tamanho desejado */
-  height: 40px; /* Substitua pelo tamanho desejado */
+  width: 40px; 
+  height: 40px; 
   background-color: #000000;
-  border-radius: 50%; /* Define o border-radius para metade da largura/altura */
+  border-radius: 50%; 
   cursor: pointer;
 
   p{
@@ -35,7 +35,7 @@
 
 .logout-box {
   position: absolute;
-  top: 70px; /* Ajuste conforme necessário */
+  top: 70px; 
   right: 80px; /* Ajuste conforme necessário */
   background-color: #fff4d5;
   padding: 10px;
