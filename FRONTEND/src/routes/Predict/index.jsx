@@ -15,6 +15,12 @@ export default function App() {
     if (storedUsername) {
       setUsername(storedUsername);
     }
+    // Inicia o chat com a mensagem inicial
+    setChatMessages([
+      { type: 'bot', text: 'Olá, como posso te ajudar?' },
+      { type: 'bot', text: '1 - Prontuário Médico' },
+      { type: 'bot', text: '2 - Acompanhamento de algum paciente' },
+    ]);
   }, []);
 
   const handleImageChange = async (e) => {
@@ -35,27 +41,27 @@ export default function App() {
 
   const handlePrediction = async (image) => {
     if (!image) {
-      // Adicione lógica para lidar com nenhum arquivo selecionado, se necessário
       return;
     }
 
     const formData = new FormData();
     formData.append('image', image);
 
-    // Faz requisição POST para o Flask
-    const response = await fetch('http://127.0.0.1:5000/predict', {
-      method: 'POST',
-      body: formData,
-    });
+    try {
+      // Faz requisição POST para o Flask
+      const response = await fetch('http://127.0.0.1:5000/predict', {
+        method: 'POST',
+        body: formData,
+      });
 
-    const data = await response.json();
-    setResult(data);
+      const data = await response.json();
+      setResult(data);
 
-    // Adiciona a mensagem do bot ao chat com o resultado
-    setChatMessages((prevMessages) => [
-      ...prevMessages,
-      { type: 'bot', text: `A classe prevista é ${getClassName(data.predicted_class)}` },
-    ]);
+      // Lógica de interação adicional com base no resultado
+      handleUserInteraction(getClassName(data.predicted_class));
+    } catch (error) {
+      console.error('Erro na previsão:', error);
+    }
   };
 
   const getClassName = (predictedClass) => {
@@ -73,20 +79,119 @@ export default function App() {
     }
   };
 
+  const handleUserInteraction = (predictedClass) => {
+    switch (predictedClass) {
+      case '1':
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { type: 'bot', text: 'Você selecionou prontuário médico. Como posso ajudar você? Escolha uma opção:' },
+          { type: 'bot', text: '1-1 - Escolher um prontuário' },
+          { type: 'bot', text: '1-2 - Ver histórico de consultas' },
+          { type: 'bot', text: '1-3 - Agendar uma consulta' },
+        ]);
+        break;
+      case '1-1':
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { type: 'bot', text: 'Você escolheu a subopção 1 de prontuário médico.' },
+          // Adicione lógica específica para a subopção 1 aqui
+        ]);
+        break;
+      case '1-2':
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { type: 'bot', text: 'Você escolheu a subopção 2 de prontuário médico. Aqui estão as consultas anteriores:' },
+          // Adicione lógica específica para a subopção 2 aqui
+        ]);
+        break;
+      case '1-3':
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { type: 'bot', text: 'Você escolheu a subopção 3 de prontuário médico. Por favor, escolha uma data disponível para agendar:' },
+          // Adicione lógica específica para a subopção 3 aqui
+        ]);
+        break;
+      case '2':
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { type: 'bot', text: 'Você selecionou Acompanhamento médico. Como posso ajudar você? Escolha uma opção:' },
+          { type: 'bot', text: '2-1 - Ver pacientes em acompanhamento' },
+          { type: 'bot', text: '2-2 - Adicionar novo paciente para acompanhamento' },
+          { type: 'bot', text: '2-3 - Verificar resultados de exames' },
+        ]);
+        break;
+      case '2-1':
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { type: 'bot', text: 'Você escolheu a subopção 1 de acompanhamento médico. Aqui estão os pacientes:' },
+          // Adicione lógica específica para a subopção 1 aqui
+        ]);
+        break;
+      case '2-2':
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { type: 'bot', text: 'Você escolheu a subopção 2 de acompanhamento médico. Por favor, forneça os detalhes do novo paciente:' },
+          // Adicione lógica específica para a subopção 2 aqui
+        ]);
+        break;
+      case '2-3':
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { type: 'bot', text: 'Você escolheu a subopção 3 de acompanhamento médico. Por favor, forneça o nome do paciente para verificar os resultados de exames:' },
+          // Adicione lógica específica para a subopção 3 aqui
+        ]);
+        break;
+      case 'glioma':
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { type: 'bot', text: 'Um glioma foi identificado.' },
+        ]);
+        break;
+      case 'meningioma':
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { type: 'bot', text: 'Um meningioma foi identificado.' },
+        ]);
+        break;
+      case 'sem tumor':
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { type: 'bot', text: 'Nenhum tumor foi identificado.' },
+        ]);
+        break;
+      case 'pituitary':
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { type: 'bot', text: 'Um tumor pituitário foi identificado.' },
+        ]);
+        break;
+      default:
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          { type: 'bot', text: 'Desculpe, não entendi. Por favor, escolha uma opção válida.' },
+        ]);
+    }
+  };
+  
+
+
   const handleSendMessage = () => {
     if (inputMessage.trim() === '') return;
 
     // Adiciona a mensagem do usuário ao estado de mensagens do chat
     setChatMessages((prevMessages) => [...prevMessages, { type: 'user-text', text: inputMessage, image: null }]);
-    setInputMessage('');
 
+    // Lógica para interação com o usuário
+    handleUserInteraction(inputMessage);
+
+    setInputMessage('');
   };
 
   const handleKeyDown = (event) => {
-    if(event.key === 'Enter') {
+    if (event.key === 'Enter') {
       handleSendMessage();
     }
-  }
+  };
 
   if (sessionStorage.getItem('token-user')) {
     return (
