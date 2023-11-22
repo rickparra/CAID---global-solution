@@ -3,22 +3,136 @@
 .container {
   max-width: 600px;
   margin: 50px auto;
-  text-align: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
 
   .presentation {
-    margin-bottom: 20px; // Adicione margem inferior desejada
-    font-size: 18px; // Adicione o tamanho de fonte desejado
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-size: 13px;
+    color: rgb(48, 41, 25);
+  }
+
+  .inputs-chat{
+    margin-top: auto; 
+  }
+
+  .chat-container {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: hidden; // Altere de 'scroll' para 'hidden'
+    display: flex;
+    flex-direction: column;
+}
+
+
+  .user-message,
+  .bot-message{
+    display: flex;
+    align-items: end;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+  }
+
+  .image-message {
+    align-self: flex-end;
+    display: flex;
+    align-items: end;
+    margin-bottom: 10px;
+  }
+
+  .user-message img,
+  .bot-message img,
+  .image-message img {
+    width: 50px;
+    /* Ajuste conforme necessário */
+    height: auto;
+    align-self: flex-end;
+
+
+  }
+
+  .user-message {
+    width:100%;
+    align-self: flex-end;
+
+
+    .user-message-content {
+      float: left;
+      background-color: rgb(218, 202, 157);
+      color: #000000;
+      padding: 10px;
+      border-radius: 5px;
+      align-self: flex-end;
+      /* Ajusta a posição do conteúdo à direita */
+      margin-left: auto;
+      /* Empurra o conteúdo para a direita */
+      width: 100%;
+      /* Garante a largura total do contêiner */
+    }
+  }
+
+  .bot-message {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .uploaded-image {
+
+    max-width: 10rem;
+    /* Garante que a imagem não ultrapasse o contêiner */
+    max-height: 100%;
+    /* Garante que a imagem não ultrapasse o contêiner */
+    object-fit: cover;
+    /* Mantém a proporção da imagem e preenche o contêiner */
+    border-radius: 5px;
+    /* Adiciona borda arredondada */
+  }
+
+  .input-container {
+    display: flex;
+    margin-top: 10px;
+
+    input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: rgb(112, 101, 72);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-left: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(119, 103, 63);
+      }
+    }
   }
 
   .upload-container {
-    border: 2px dashed #3498db;
-    color: #3498db;
+    margin-top: 0.5rem;
+    border: 2px dashed rgb(112, 101, 72);
+    color: rgb(112, 101, 72);
     padding: 20px;
     cursor: pointer;
     display: block;
     width: 100%;
     transition: background-color 0.3s ease;
-    margin-bottom: 20px; // Reduzi para 20px para corresponder à margem da apresentação
+    margin-bottom: 20px;
 
     &:hover {
       background-color: #f2f2f2;
@@ -32,12 +146,6 @@
   .image-container {
     height: 400px;
     overflow: hidden;
-
-    .uploaded-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
 
   .result {
