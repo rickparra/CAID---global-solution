@@ -32,7 +32,7 @@ export default function About() {
 
         <div className="direita">
           <h1>
-          Nosso propósito com o CAID é criar um impacto positivo e duradouro na vida dos pacientes. Com dedicação à tecnologia e inovação em saúde, buscamos superar expectativas no diagnóstico precoce do câncer, promovendo mudanças significativas no prognóstico e qualidade de vida dos pacientes. Acreditamos no poder da inovação e cuidado centrado na pessoa para transformar vidas.          </h1>
+          Nosso propósito com o CAID é criar um impacto positivo e duradouro na vida dos pacientes. Com dedicação à tecnologia e inovação em saúde, vamos superar expectativas no diagnóstico precoce do câncer, promovendo mudanças significativas no prognóstico e qualidade de vida dos nossos pacientes. Acreditamos no poder da inovação e cuidado centrado na pessoa para transformar vidas.          </h1>
 
           <div className="blockContainer">
             <Block
