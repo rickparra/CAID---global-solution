@@ -80,7 +80,6 @@ export default function App() {
     setChatMessages((prevMessages) => [...prevMessages, { type: 'user-text', text: inputMessage, image: null }]);
     setInputMessage('');
 
-    // Adicione a lógica de envio da mensagem para o chatbot aqui (se necessário)
   };
 
   const handleKeyDown = (event) => {
