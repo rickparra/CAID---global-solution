@@ -84,9 +84,26 @@ Usuário: <code>Parra</code><br>
 Senha: <code>senha</code></p>
 
 
-  <h2>Contribuindo</h2>
+  <h2>Contribuidores</h2>
 
-  <p>Informações sobre como contribuir com o projeto - issues, pull requests, etc.</p>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>RM</th>
+    <th>Turma</th>
+  </tr>
+  <tr>
+    <td>Henrique Parra Benitez</td>
+    <td>RM551973</td>
+    <td>1ESPV</td>
+  </tr>
+  <tr>
+    <td>Tony Willian da Silva Segalin</td>
+    <td>RM550667</td>
+    <td>1ESPV</td>
+  </tr>
+</table>
+
 
   <h2>License</h2>
 
