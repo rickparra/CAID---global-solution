@@ -19,7 +19,7 @@
   <h2>Funcionalidades</h2>
 
   <ul>
-    <li>Upload de imagens de exames como mamografia, tomografia, etc.</li>
+    <li>Upload de imagens de exames tomografia</li>
     <li>Extração de dados relevantes do prontuário eletrônico do paciente</li>
     <li>Modelo de deep learning para análise das imagens e detecção de anomalias</li>
     <li>Chatbot para diálogo com o médico, levantando informações importantes do caso</li>
