@@ -221,7 +221,7 @@ export default function App() {
             </div>
             <form>
               <label htmlFor="imageInput" className="upload-container">
-                Arraste e solte ou clique aqui para escolher uma imagem
+                Arraste e solte ou clique aqui para escolher uma imagem de exame
                 <input
                   id="imageInput"
                   type="file"
