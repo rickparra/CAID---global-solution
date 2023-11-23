@@ -45,31 +45,44 @@
 
   <h5>Dependências Backend</h5>
 
-  <pre><code>pip install flask opencv-python keras</code></pre>
+<pre><code>pip install flask opencv-python keras</code></pre>
 
-  <ol>
-    <li><strong>Treinar o Modelo de Deep Learning:</strong>
-      <ul>
-        <li>Acesse a pasta <code>deeplearning</code>.</li>
-        <li>Abra o arquivo <code>keras.ipynb</code> para treinar o modelo.</li>
-      </ul>
-    </li>
-    <li><strong>Configurar o Backend:</strong>
-      <ul>
-        <li>Vá para a pasta <code>backend</code>.</li>
-        <li>Execute o arquivo <code>app.py</code>.</li>
-      </ul>
-    </li>
-    <li><strong>Configurar o Frontend:</strong>
-      <ul>
-        <li>Vá para a pasta <code>frontend</code>.</li>
-        <li>Execute os seguintes comandos:</li>
-      </ul>
-      <pre><code>npm install
+<h5>Dependências para Análise de Dados e Treinamento do Modelo</h5>
+
+<pre><code>pip install pandas numpy matplotlib seaborn pillow tqdm scikit-learn tensorflow</code></pre>
+
+
+<ol>
+  <li><strong>Treinar o Modelo de Deep Learning:</strong>
+    <ul>
+      <li>Acesse a pasta <code>deeplearning</code>.</li>
+      <li>Abra o arquivo <code>keras.ipynb</code> execute para treinar o modelo.</li>
+    </ul>
+  </li>
+  <li><strong>Configurar o Backend:</strong>
+    <ul>
+      <li>Vá para a pasta <code>backend</code>.</li>
+      <li>Execute o arquivo <code>app.py</code>.</li>
+    </ul>
+  </li>
+  <li><strong>Configurar o Frontend:</strong>
+    <ul>
+      <li>Execute os seguintes comandos em um terminal:</li>
+    </ul>
+    <pre><code>cd frontend
+npm install
 npm run backend  # Conectar com o jsonserver
 npm run dev</code></pre>
-    </li>
-  </ol>
+  </li>
+</ol>
+
+  <h3>Após configurar o ambiente</h3>
+  <h5>Após completar esses passos, acesse a tela de login:</h5>
+
+<p>Faça login com as seguintes informações:<br>
+Usuário: <code>Parra</code><br>
+Senha: <code>senha</code></p>
+
 
   <h2>Contribuindo</h2>
 
