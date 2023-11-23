@@ -83,6 +83,7 @@ npm run dev</code></pre>
 Usuário: <code>Parra</code><br>
 Senha: <code>senha</code></p>
 
+<h5>Para fazer o LOGOUT basta apertar no botão localizado na parte superior direita do menu "A\" e selecionar "Logout"</h5>
 
   <h2>Contribuidores</h2>
 
