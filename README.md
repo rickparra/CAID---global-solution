@@ -32,7 +32,7 @@
     <li>Python</li>
     <li>Framework KERAS para models de deep learning</li>
     <li>React para interface web</li>
-    <li>Flask para a API</li>
+    <li>Flask para o Backend</li>
   </ul>
 
   <h2>Começando</h2>
