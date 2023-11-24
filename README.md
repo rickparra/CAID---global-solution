@@ -24,6 +24,8 @@
     <li>Modelo de deep learning para análise das imagens e detecção de anomalias</li>
     <li>Chatbot para diálogo com o médico, levantando informações importantes do caso</li>
     <li>Interface amigável para apresentar resultados e explicações</li>
+    <li>Redirecionamento de página</li>
+    <li>Autênticação de login</li>
   </ul>
 
   <h2>Tecnologias Utilizadas</h2>
@@ -83,7 +85,8 @@ npm run dev</code></pre>
 Usuário: <code>Parra</code><br>
 Senha: <code>senha</code></p>
 
-<h5>Para fazer o LOGOUT basta apertar no botão localizado na parte superior direita do menu "A\" e selecionar "Logout"</h5>
+<h5>Para fazer o LOGOUT:</h5>
+<p> basta apertar no botão localizado na parte superior direita do menu "A\" e selecionar "Logout"</p>
 
   <h2>Contribuidores</h2>
 
@@ -92,16 +95,19 @@ Senha: <code>senha</code></p>
     <th>Nome</th>
     <th>RM</th>
     <th>Turma</th>
+    <th>Github</th>
   </tr>
   <tr>
     <td>Henrique Parra Benitez</td>
     <td>RM551973</td>
     <td>1ESPV</td>
+    <td>https://github.com/rickparra</td>
   </tr>
   <tr>
     <td>Tony Willian da Silva Segalin</td>
     <td>RM550667</td>
     <td>1ESPV</td>
+    <td>https://github.com/TonyWillianFIAP</td>
   </tr>
 </table>
 
