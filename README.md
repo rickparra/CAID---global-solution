@@ -64,7 +64,6 @@ pip install opencv-python
 pip install tqdm
 pip install -U scikit-learn
 pip install tensorflow
-
 pip install keras
 </code></pre>
 
