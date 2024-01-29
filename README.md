@@ -51,7 +51,20 @@
 
 <h5>Dependências para Análise de Dados e Treinamento do Modelo</h5>
 
-<pre><code>pip install pandas numpy matplotlib seaborn pillow tqdm scikit-learn tensorflow</code></pre>
+<pre><code>
+pip install pandas
+pip install numpy
+pip install matplotlib
+pip install seaborn
+pip install Pillow
+pip install opencv-python
+pip install tqdm
+pip install -U scikit-learn
+pip install tensorflow
+pip install Flask-CORS
+pip install Flask
+pip install keras
+</code></pre>
 
 
 <ol>
