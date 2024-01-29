@@ -83,7 +83,7 @@ pip install keras
   </li>
   <li><strong>Configurar o Frontend:</strong>
     <ul>
-      <li>Execute os seguintes comandos em um terminal:</li>
+      <li>Execute os seguintes comandos em dois terminais diferentes:</li>
     </ul>
     <pre><code>cd frontend
 npm install
