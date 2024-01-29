@@ -47,7 +47,10 @@
 
   <h5>Dependências Backend</h5>
 
-<pre><code>pip install flask opencv-python keras</code></pre>
+<pre><code>
+pip install Flask-CORS
+pip install Flask
+</code></pre>
 
 <h5>Dependências para Análise de Dados e Treinamento do Modelo</h5>
 
@@ -61,8 +64,7 @@ pip install opencv-python
 pip install tqdm
 pip install -U scikit-learn
 pip install tensorflow
-pip install Flask-CORS
-pip install Flask
+
 pip install keras
 </code></pre>
 
